@@ -1,4 +1,4 @@
 chrisbe.st
 ==========
 
-Personal resume website.
+Resume Website (v.2.0)

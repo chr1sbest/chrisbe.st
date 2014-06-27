@@ -201,7 +201,6 @@ charts.d3Chart.prototype.bindData = function(data) {
         .attr('class', 'd3-tip')
         .offset([-10, 0])
         .html(function(d) {
-            mixpanel.track(d.name + " Hovered");
             var stars = Math.floor(d.skill / 2)
             ,   emptyStars = 10 - d.skill
             ,   starString = ''
