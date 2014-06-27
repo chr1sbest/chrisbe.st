@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class = "container">
+    <div class = "row">
+        <div class="page-header">
+            <h1>The Recipe</h1>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="panel panel-default col-md-6 ">
+            <div class="panel-body">
+                <h2>Back-end: </h2>
+                <ul>
+                    <li><b>Python 2.7</b>
+                    <ul>
+                        <li>pip<small> - Vital tool for installing Python packages</small>
+                        <ul><a href='http://www.youtube.com/watch?v=MIHYflJwyLk'>Youtube Tutorial - 3 Mins</a></ul></li>
+                        <li>Flask<small> - Lightweight webframework for Python</small>
+                        <ul><a href='http://flask.pocoo.org/'>Basic Tutorial - 1 Hr</a></ul>
+                        <ul><a href='http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world'>Comprehensive Tutorial - 12+ Hrs</a></ul></li>
+                        </li> 
+                        <li>Flask-Mail<small> - Flask extension for mail handling</small>
+                        <ul><a href='http://pythonhosted.org/flask-mail/'>Documentation/Tutorial - 2 Hrs</a></ul></li>
+                        <li>virtualenv<small> - Allows separate Python environments on same machine</small>
+                        <ul><a href='http://www.youtube.com/watch?v=IX-v6yvGYFg'>Youtube Tutorial - 20 mins</a></ul></li>
+                        <li>virtualenvwrapper<small> - Organizes virtualenv + shortcuts</small>
+                        <ul><a href='http://www.youtube.com/watch?v=UcbUXq0wd-8'>Youtube Tutorual - 20 Mins</a></ul></li>
+                    </ul></li>
+                    <br>
+                    <li><b>Heroku </b>
+                    <ul>
+                        <li>Git<small> - Version Control (and necessary for Heroku!)</small>
+                        <ul><a href='http://git-scm.com/docs/gittutorial'>Tutorial - 1 Hour</a></ul>
+                        <ul><a href='https://help.github.com/articles/generating-ssh-keys'>Generating SSH Key for Github - 20 Mins</a></ul></li>
+                        <li>gunicorn<small> - Python WSGI Server for UNIX</small>
+                        <ul><a href='https://devcenter.heroku.com/articles/getting-started-with-python'>Tutorual - 20 Mins</a></ul></li>
+                        <li>Mailgun<small> - SMTP Mail Server</small>
+                        <ul><a href='https://devcenter.heroku.com/articles/mailgun'>Tutorual - 30 Mins</a></ul></li>
+                        <li>Zerigo<small> - DNS Management</small>
+                        <ul><a href='https://devcenter.heroku.com/articles/zerigo_dns'>Tutorual - 30 Mins</a></ul></li>
+                    </ul></li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel panel-default col-md-6">
+            <div class="panel-body">
+                <h2>Front-end:</h2>
+                <ul>
+                    <li>HTML5 + CSS3<small> - Stylized Text on Webpages</small>
+                    <ul><a href='https://www.udemy.com/learn-html5-programming-from-scratch/#dashboard'>Udemy Tutorial - 8 Hours</a></ul></li>
+                    <li>Twitter Bootstrap 3<small> - Responsive Website CSS/JS</small>
+                    <ul><a href='http://www.youtube.com/watch?v=YXVoqJEwqoQ'>Youtube Tutorial - 2 Hours</a></ul></li>
+                    <li>Javascript & jQuery<small> - Page Actions</small>
+                    <ul><a href='http://www.lynda.com/jQuery-tutorials/essential-training/48370-2.html?srchtrk=index:1%0Alinktypeid:2%0Aq:jquery%0Apage:1%0As:relevance%0Asa:true%0Aproducttypeid:2'>Lynda.com Tutorial - 5 Hours</a></ul>
+                    <ul><a href='http://www.lynda.com/promo/trial/Default.aspx?lpk35=3404&utm_medium=podcast&utm_source=Photofocus&utm_campaign=vanity'>***10-day free lynda.com coupon***</a></ul></li>
+                    <li>FontAwesome<small> - Fonts & Icons</small>
+                    <ul><a href='http://fontawesome.io/get-started/'>Documentation - 30 Mins</a></ul></li>
+                </ul>
+                <h2>Hardware</h2>
+                <ul>
+                    <li>1 Laptop</li>
+                    <li>1 Internet Connection</li>
+                    <li>1 Pair of Headphones</li>
+                    <li>Many cups of coffee</li>
+                </ul>
+                <h2>Alcohol<small id="right"> Optional</h2></small>
+                <ul>
+                    <li>12 bottles Anchor Steam 12oz </li>
+                    <li>2 bottles Old Englishe 40oz </li>
+                    <li>1 Flask of Gin 8oz</li>
+                    <li>1 Flask of Rum 8oz</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

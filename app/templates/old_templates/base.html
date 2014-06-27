@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>chrisbe.st</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href = "../static/css/bootstrap.min.css" rel="stylesheet">
+        <link href = "../static/css/styles.css" rel= "stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../static/images/favicon.ico" > 
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src = "../static/js/newRequest.js"></script>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class = "custom.nav nav.pills">
+            <div class = "container">
+                <a href = "/" class = "navbar-brand">chrisbe.st</a> 
+                <button class = "navbar-toggle btn-default" data-toggle = "collapse" data-target = ".navHeaderCollapse" >
+                    <span class = "glyphicon glyphicon-bar" style="color:black"></span>
+                    <span class = "glyphicon glyphicon-bar"></span>
+                    <span class = "glyphicon glyphicon-bar"></span>
+                </button>
+                <div class = "collapse navbar-collapse navHeaderCollapse">
+                    <ul class = "nav navbar-nav navbar-right">
+                        <li><a href = "/aboutme" ><i class="fa fa-user fa-md"></i>  About Me </a></li> 
+                        <li><a href = "/resume" ><i class="fa fa-briefcase fa-md"></i>  Resume </a></li> 
+                        <li><a href = "#contact" data-toggle="modal"><i class="fa fa-envelope fa-md"></i>  Contact</a></li>
+                        <li><a href = "/"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    </ul>
+                    <div class="nav navbar-right">
+                        <a href="https://facebook.com/chrisbest"><img class="opacity social_img" src="../static/images/social_media/facebook.png" title="facebook" /></a>
+                        <a href="https://plus.google.com/101037855129952223400"><img class="opacity social_img" src="../static/images/social_media/g+.png" title="G+"/></a>
+                        <a href="https://linkedin.com/in/chr1sbest/"><img class="opacity social_img" src="../static/images/social_media/linkedin.png"  title="LinkedIn" /></a>
+                        <a href="https://github.com/chr1sbest"><img class="opacity social_img" src="../static/images/social_media/Github.png"  title="GitHub"/></a>
+                        <a href="https://soundcloud.com/statusflo"><img class="opacity social_img"  src="../static/images/social_media/soundcloud.png" title="SoundCloud"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="boot-alert">
+        </div>
+        {% block content %}
+        {% endblock %}
+        <!--Contact me form--> 
+        <div class = "modal fade" id = "contact" role="dialog">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <form class = "form-horizontal">
+                        <div class = "modal-header">
+                            <h3>Contact Me</h3>
+                        </div>
+                        <div class = "modal-body">
+                            <div class = "form-group">
+                                <label for = "contact-name" class = "col-lg-2 control-label">Name: </label> 
+                                <div class = "col-lg-10">
+                                    <input type = "text" class = "form-control" id="contact-name" placeholder="Full name" >
+                                    <br>
+                                </div>
+                                <label for = "contact-email" class = "col-lg-2 control-label" >Email: </label> 
+                                <div class = "col-lg-10">
+                                    <input type = "text" class = "form-control" id="contact-email" placeholder ="you@example.com" >
+                                    <br>
+                                </div>
+                                <label for = "contact-msg" class = "col-lg-2 control-label">Message: </label> 
+                                <div class = "col-lg-10">
+                                    <textarea class = "form-control" rows="8" placeholder="Enter message here" id="contact-msg"  ></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <p>For job inquiries, feel free to contact me directly at <a = href="mailto:hire@chrisbe.st">hire@chrisbe.st</a></p>
+                            <div class= "modal-footer">
+                                <a id ="cancel-button" class = "btn btn-default" data-dismiss = "modal">Close</a> 
+                                <button id = "submit-button" class = "btn btn-primary" type="submit" >Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script src = "../static/js/bootstrap.js"></script>
+                <script type="text/javascript">
+                    $(document).ready( function() {
+                            submitnewRequest();
+                            });
+                    $('#cancel-button').click( function() {
+                            $('#contact #myModal').modal('hide');
+                            $('body').removeClass('modal-open');
+                            $('.modal-backdrop').remove();
+                            })
+        </script>
+        {% block javascript %}
+        {% endblock %}
+    </body>
+    <html>
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>chrisbe.st</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Personal Website">
+        <meta name="author" content="Chris Best">
+        <script src="../static/js/analytics.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/css/style.css" rel="stylesheet">
+        <link href="../static/css/face.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header class="fixed background-navy" style="margin-bottom:0px">
+            <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                    data-target="#example-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar black"></span>
+                    <span class="icon-bar black"></span>
+                    <span class="icon-bar black"></span>
+                </button>
+                <span class="navigation title chrisbest">
+                    <a href="#start" style="width:150px; float:left; text-decoration:none;">
+                        chrisbe.st
+                    </a>
+                </span>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul style="margin-top:0px; background-color: rgba(0,0,0,0.8)" class="nav navbar-nav navigation pull-right">
+                    <li class="title cl-effect-1 ">
+                        <a href="#start" class="s-tooltip subheader" data-original-title="Find more about me" data-placement="bottom">about</a>
+                    </li>
+                    <li class="title cl-effect-1 ">
+                        <a href="#skills" class="s-tooltip subheader" data-original-title="The skills with which I pay the bills" data-placement="bottom">skills</a>
+                    </li>
+                    <li class="title cl-effect-1 ">
+                        <a href="#blog"  class="s-tooltip subheader" data-original-title="Under Construction" data-placement="bottom">blog</a>
+                    </li>
+                    <li class="title cl-effect-1">
+                        <a href="#contact" class="s-tooltip subheader" >contact</a>
+                    </li>
+               </ul>
+            </div>
+            </nav>
+        </header>
+        
+        <div class="container">
+            <!-- ABOUT ME -->
+            <h1 id="start" style="margin-top:0px"></h1>
+            <div class="row">
+                <div class = "col-sm-4 facePic">
+                   <br><br>
+                   <div class="ch-item circular-image">
+                       <div class="ch-info">
+                           <h3 style:"text-align:center" >Chris Best</h3>
+                           <p> <a href="https://www.youtube.com/watch?v=y6Sxv-sUYtM"></a>Full-stack web developer</p>
+                       </div>
+                   </div>
+                </div>
+                <div class="col-sm-offset-1 col-sm-7">
+                    <h2 style="padding-bottom:10px"><b>Bio</b></h2>
+                    <h3>Humble Beginnings</h3>
+                    <p>At the bottom of the rung, I was tasked with a monthly recurring 20+ hrs of manual data entry at an internship. Being crafty (lazy), I looked into alternative solutions and found a macro-scripting language. After studying up the docs for a few hours, I wrote a script to automate the task to complete the data entry in 10% of the time. As I kicked my feet up onto my desk and queued up some youtube videos while my script ran, I realized I had found my true love. </p>
+                    <p>I managed to get my hands onto the unpublished internal API docs and improved my data entry script to run in less than 1% of the time and built a web interface using Python so that my team could make use of it. I (think) I had the curiosity, tenacity, and sharpness to be a software engineer, but I also knew that I lacked the fundamentals. I left the position to study computer science full-time with a rigorous plan and courseload with the hopes of landing an entry-level job after three months.</p>
+                </div>
+                <div class = "col-sm-12">
+                    <h3>Coffee and Ramen</h3>
+                    <p>Armed with determination, boxes of Shin-Ramyun, and brilliant mentors, I worked through two of the most difficult courses Berkeley's CS program while building out a few toys of my own. After finishing up with my crash-course in three months, I landed a few job offers. The most important factor in choosing my first software job was "How much will I learn and how much will I be challenged in this position?" Of course, I picked an early-stage startup.</p>
+                    <h3>Drinking from the Firehose</h3>
+                    <p>As one of two engineers working on the project, I get to have a hand in just about every aspect of the application. Building our application is by far the most difficult thing I have ever done in my life. Fortunately, I also lucked out in having brilliant mentors, both on the tech and the professional side. They turned out to think that I was pretty cool too, and graciously offered me a co-founding partnership.<p>
+                    <p>As frustrating and challenging software development can be, there are very few feelings better than mastering a language, library, skillset, etc., and being able to create something out of nothing.
+                    </p>
+                </div>
+            </div>
+            <!-- ABOUT ME END-->
+            
+            <!-- SKILLS -->
+            <div id="skills"></div><br> <!--Hack for scrollTo navigation-->
+            <h1 style="margin-top:50px">Skills <small> (Hover)</small></h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default chart-btn" dataset="frontend">Frontend</button>
+                        <button type="button" class="btn btn-default chart-btn" dataset="backend">Backend</button>
+                        <button type="button" class="btn btn-default chart-btn" dataset="data">Data</button>
+                        <button type="button" class="btn btn-default chart-btn" dataset="etc">Etc</button>
+                    </div>
+                    <div id="d3Chart"></div>
+                </div>
+                <div style="text-align:center" class="col-sm-4 education">
+                    <h2><b>Education</b></h2>
+                    
+                    <h4>University of California, Berkeley</h4>
+                    <p>2010 - 2012<br />B.A. Psychology - Cum Laude (3.75)</p>
+                    
+                    <h4>San Diego Mesa College</h4>
+                    <p>2008 - 2010<br />A.A. Japanese - Magna Cum Laude (3.89)</p>
+                    <br>
+                </div>
+            </div>
+            <h2 style="text-align:center"><b>Work experience</b></h2>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div style="text-align:center">
+                        <h4>Software Engineer & Cofounder</h4>
+                        <p>IntelRiver<br />Jan 2014- Present</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div style="text-align:center">
+                        <h4>Junior Software Engineer</h4>
+                        <p>Autodidact CS Bootcamp<br />Sept 2013 - Dec 2013</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div style="text-align:center">
+                        <h4>Product Management Intern</h4>
+                        <p>SpringAhead<br />Mar 2013 - Sept 2013</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div style="text-align:center">
+                        <h4>Research Assistant</h4>
+                        <p>Sleep & NeuroImaging Laboratory<br />Jan 2011 - Jan 2013</p>
+                    </div>
+                </div>
+            </div>
+            <!-- SKILLS END -->
+
+            <!--BLOG-->
+            <h1 id="blog" style="height:0px; margin:0px;"></h1><br> <!--Hack for scrollto Nav-->
+            <div class="row">
+                <div class="col-md-12">
+                <h1 style="margin-top:50px">Blog</h1>
+                    <h2> { Under Construction } </h2>
+                </div>
+            </div>
+            <!--BlOG END-->
+            
+            <!-- CONTACT -->
+            <div id="contact"></div><br> <!--Hack for scrollTo navigation-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 style="margin-top:50px">Contact Me</h1>
+                    <form>
+                        <h4>E-mail</h4>
+                            <div class="border-stripes">
+                                <input type="email" class="textfield" id="contact-email" name="email" placeholder="Your e-mail address" />
+                            </div>
+                        <h4>Message</h4>
+                            <div class="border-stripes">
+                                <textarea class="textarea" name="contact-message" id="contact-msg" rows="3" placeholder="Your message"></textarea>
+                            </div><br/><br/>
+                            <button type="submit" class="btn btn-primary" id="submit-button"> 
+                                <i id="spinner" class="fa"></i> Send message 
+                            </button>
+                    </form>
+                </div>
+                <br><br><br>
+                <h3>Or reach me at:</h3>
+                <div class="col-sm-3">
+                    <ul class="social-list">
+                        <li><a style="color:#428bca"href="https://facebook.com/chrisbest">
+                            <img class="opacity social_img" src="../static/images/social_media/facebook.png" title="facebook" />
+                            fb/chrisbest</a>
+                        </li>
+                        <li><a style="color:#428bca"href="https://twitter.com/chrisbest">
+                            <img class="opacity social_img" src="../static/images/social_media/twitter.png" title="twitter" />
+                            twitter/chr1sbest</a>
+                        </li>
+                        <li><a style="color:#428bca"href="https://linkedin.com/in/chr1sbest/">
+                            <img class="opacity social_img" src="../static/images/social_media/linkedin.png"  title="LinkedIn" />
+                            linkedin/chr1sbest</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul class="social-list">
+                        <li><a style="color:#428bca"href="https://github.com/chr1sbest">
+                            <img class="opacity social_img" src="../static/images/social_media/Github.png"  title="GitHub"/>
+                            github/chr1sbest</a>
+                        </li>
+                        <li><a style="color:#428bca"href="https://plus.google.com/101037855129952223400">
+                            <img class="opacity social_img" src="../static/images/social_media/g+.png" title="G+"/>
+                            g+/chr1sbest</a>
+                        </li>
+                        <li><a style="color:#428bca"href="https://soundcloud.com/statusflo">
+                            <img class="opacity social_img"  src="../static/images/social_media/soundcloud.png" title="SoundCloud"/>
+                            sc/statusflo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="boot-alert"></div>
+            <!-- CONTACTS END -->
+        </div>
+
+        <div id="scroll-to-top">
+        <!-- ScrolltoTop -->
+        <a href="#" class="scroll-to-top s-tooltip" data-placement="left" data-original-title="Scroll to top">
+            <span class="box">
+                <i class="fa fa-chevron-up"/></i>
+            </span>
+        </a>
+        </div>
+        
+        <footer class="background-navy">
+            <div class="container">
+                <div class="pull-left">Copyright &copy; 2014</div>
+            </div>
+        </footer>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="../static/js/jquery.scrollTo.js"></script>
+        <script src="../static/js/style.js"></script>
+    </body>
+</html>

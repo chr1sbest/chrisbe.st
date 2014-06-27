@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="../static/js/jquery.BlackAndWhite.js"></script>
+{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<div class = "container ">
+    <div class = "row"> 
+        <div class = "col-md-9 jumbotron">
+            <h1>Hello World!</h1>
+            <p>
+            This is my first responsive website built with Python-Flask, Twitter Bootstrap, and deployed on Heroku.<br><br>
+            <i class="fa fa-quote-left fa-2x pull-left fa-border"></i>
+            It is by logic that we prove, but by intuition that we discover. To know how to criticize is good; to know how to create is better. 
+            <small id="right">-Henri Poincarék</small>
+            </p>
+        </div>
+        <div class = "col-md-3 visible-lg visible-md">
+            <a class = "bwWrapper" href="http://www.youtube.com/watch?v=s1JsBhRCRH0" target="_blank"><img style="width:100%"  src="../static/images/profile.jpg" title="hi"></a>
+        </div>
+    </div>     
+</div>
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col-lg-4 text-center">
+            <h3><a href = "/aboutme">About me</a></h3>
+            <p>Interested in why I built this website? Curious about what part of the world the domain '.st' comes from? All this and more!</p>
+            <a href = "/aboutme" class ="btn btn-default">Read More</a>
+        </div>
+        <div class = "col-lg-4 text-center">
+            <h3><a href = "/resume">Portfolio</a></h3>
+            <p>Looking to see an organized collection of my skills, work experience, and professional references? Look no further!</p>
+            <a href = "/resume" class ="btn btn-default">Read More</a>
+        </div>
+        <div class = "col-lg-4 text-center">
+            <h3><a href = "/recipe">The Recipe</a></h3>
+            <p>Want to know more about the components of this website? I've listed links to tutorials and guides to help you get started on your own projects. </p>
+            <a href = "/recipe" class ="btn btn-default">Read More</a>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+    $(window).load(function(){
+        $('.bwWrapper').BlackAndWhite({
+            hoverEffect : true, // default true
+            // set the path to BnWWorker.js for a superfast implementation
+            webworkerPath : false,
+            // for the images with a fluid width and height 
+            responsive:true,
+            // to invert the hover effect
+            invertHoverEffect: false,
+            // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+            intensity:1,
+            speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+            fadeIn: 200, // 200ms for fadeIn animations
+            fadeOut: 800 // 800ms for fadeOut animations
+            },
+            onImageReady:function(img) {
+            // this callback gets executed anytime an image is converted
+            }
+            });
+                });
+</script>
+{% endblock %}

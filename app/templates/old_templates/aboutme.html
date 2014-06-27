@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class = "container">
+    <div class = "row">
+        <div class = "panel panel-default col-md-10 col-md-offset-1">
+            <div class = "panel-body">
+                <div class = "page-header">
+                    <h1>About Me <small id="right">Updated on December 1st, 2013</small></h1>
+                </div>
+                <h2>Who am I?</h2>
+                <p>I prefer to go by Chris, but my full name is Christopher Michael Best. My parents were radicals and chose the two least common names for male babies the year I was born (unless I'm reading <a href="#myModal" title="According to US Census Bureau" data-toggle="modal" data-img-url="../static/images/babynames.png">this table </a>wrong). My genetic predisposition to said radicalism has gotten me into trouble in the past, but ultimately I was able to right my ways through community college and finish my degree at the highly conservative, conventional, UC Berkeley. /s<br><br>
+                I was born in Seoul, South Korea; moved to <a href="#myModal" data-toggle="modal" data-img-url="../static/images/gifuken.jpg">Gifu-ken</a>, Japan for a few years; and then spent the majority of my childhood in San Diego, California. Although the .st (in chrisbe.st) is the internet country code for S&atilde;o Tom&eacute; & Pr&iacute;ncipe, I have unfortunately never visited this <a href="#myModal" data-toggle="modal" data-img-url="../static/images/saotome.jpg">beautiful </a>island nation off the Coast of West Africa.. but eventually I'd like to. <b>'Visit S&atilde;o Tom&eacute; & Pr&iacute;ncipe to thank them for the domain' -- Added to bucket_list.</b> <br><br>
+                I'm currently located in the bustling, eccentric town of Berkeley!
+                </p>
+                <h2>Why did I make this site?</h2>
+                <p>
+                At my previous internship, I wrote a few scripts that automated dozens of hours of manual labor -- they were crude, but they worked. My initial scripts saved around 50% of the time while being fully automated, allowing me to watch (educational) youtube videos while they ran. Eventually, I improved these scripts to run in roughly 3% of the time using batch API requests -- these scripts are still being used and have saved hundreds of hours of manual data entry since (crazy, right?) At the time, I didn't have any 'conventional' experience or fundamentals, but I fell in love with the confluence of artistry and problem-solving in software development.<br><br>
+                Unfortunately, my familiarity with Google, Stack Overflow, and shitty Python scripts weren't enough to land me a developing gig. Instead of taking the next job I could find (like how I chose to work at a <a href="#myModal" title="The Melt" data-toggle="modal" data-img-url="../static/images/themelt.jpg">Grilled Cheese restaurant </a>immediately after graduating Berkeley..), I decided to take a few months to develop my fundamentals as a programmer. I started auditing two Berkeley Engineering CS courses, started building my own applications, and consumed every CS-related resource I could get my hands on. <br><br>
+                In producing a website completely from scratch and 99% from the command line & vim, I've been able to apply a wide-range of knowledge that I have accumulated to a project that would directly benefit me in my job search. There's that, and I also just love doing this shit.<br><br> 
+                <h2>What are my goals?</h2>
+                <p>
+                Taking time off to immerse myself in full-stack development was if anything, a calculated financial risk. I organized funds to support myself for two months while taking the UC Berkeley courses, and two months to find work after that. To assure that my financial risk was manageable and the workload was feasible, I drew out a strict schedule of coursework and a lighter schedule to work on personal projects.  <br><br>
+                According to that schedule I drew up two months ago, I will be officially starting to look for work today -- December 1st.<br><br>
+
+                <b>My goal is to find a job that allows me to use my combination of interpersonal and technical skills, challenges me intellectually, and encourages my passion for growth and development.</b> If you are interested in the work I could offer, please <a href="#contact" data-toggle="modal">contact me.</a>
+                </p>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div id="myModal" class="modal fade col-lg-6 col-lg-offset-3 " role="dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <button id="cancel-button" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    </div>
+    <div class="modal-body">
+        <img src="#" width="100%" height="100%"/>
+    </div>
+    <div class="modal-footer">
+        <button id ="cancel-button" class="btn close" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type = "text/javascript">
+    $('a').click(function(e) {
+            $('#myModal img').attr('src', $(this).attr('data-img-url')); 
+            });
+</script>
+{% endblock %}
