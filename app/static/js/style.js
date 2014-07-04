@@ -133,7 +133,7 @@ var charts = {
             mixpanel.track("Resize Event");
             e.preventDefault();
             $('#d3Chart').children().remove();
-            window.skillChart = new d3Chart();
+            window.skillChart = new charts.d3Chart();
             window.skillChart.bindData(charts.data.Frontend);
             window.skillChart.loaded = true;
         });
