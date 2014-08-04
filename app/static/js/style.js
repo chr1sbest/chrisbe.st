@@ -207,6 +207,7 @@ charts.d3Chart.prototype.bindData = function(data) {
     this.svg.selectAll('.x.axis').call(this.xAxis)
         .selectAll("text")  
         .style("text-anchor", "middle")
+        .attr("class", "d3-text")
         .attr("transform", function(d) {
             return "rotate(-10)" 
         });

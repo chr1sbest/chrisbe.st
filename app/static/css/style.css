@@ -89,6 +89,14 @@ rect:hover{fill: orange; cursor: pointer; cursor: hand;}
 .d3-tip:after {box-sizing: border-box; display: inline; font-size: 10px; width: 100%; line-height: 1;
     color: rgba(0, 0, 0, 0.8); content: "\25BC"; position: absolute; text-align: center;}
 .d3-tip.n:after {margin: -1px 0 0 0; top: 100%; left: 0;}
+.d3-text {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 /* footer */
 footer { margin-top: 20px; padding: 20px 0; color: #888; text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 0; }
