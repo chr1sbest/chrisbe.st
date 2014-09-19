@@ -69,6 +69,13 @@ ul.work li { display: inline-block; background: url(../img/work-arrow.png) right
 ul.work li:last-child { padding-right: 0; background: transparent; }
 ul.work li h4 { margin: 17px 0 12px 0; }
 
+/* carousel */
+.carousel-caption{
+    font-size: 30px;
+    color: #333;
+    background-color: rgba(0,0,0,0.1);
+}
+
 /* forms */
 select,
 textarea,

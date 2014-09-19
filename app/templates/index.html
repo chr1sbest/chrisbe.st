@@ -44,7 +44,7 @@
                         <a href="#skills" class="s-tooltip subheader" data-original-title="The skills with which I pay the bills" data-placement="bottom">skills</a>
                     </li>
                     <li class="title cl-effect-1 ">
-                        <a href="#blog"  class="s-tooltip subheader" data-original-title="Under Construction" data-placement="bottom">blog</a>
+                        <a href="#projects"  class="s-tooltip subheader" data-original-title="Recent projects" data-placement="bottom">projects</a>
                     </li>
                     <li class="title cl-effect-1">
                         <a href="#contact" class="s-tooltip subheader" >contact</a>
@@ -139,15 +139,73 @@
             </div>
             <!-- SKILLS END -->
 
-            <!--BLOG-->
-            <h1 id="blog" style="height:0px; margin:0px;"></h1><br> <!--Hack for scrollto Nav-->
+            <h1 id="projects" style="height:0px; margin:0px;"></h1><br> <!--Hack for scrollto Nav-->
             <div class="row">
-                <div class="col-md-12">
-                <h1 style="margin-top:50px">Blog</h1>
-                    <h2> {  Under Construction  }
-                    <a style="color:#428bca" href="http://blog.chrisbe.st"> View Progress</a>
-                    </h2>
+              <div class="col-md-12">
+              <h1 style="margin-top:50px">Projects</h1>
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <a target="_blank" href="http://closebus.herokuapp.com">
+                        <img src="static/images/closebus.png" alt="Closebus - Realtime Travel Estimator">
+                      </a>
+                      <div class="carousel-caption">
+                        Realtime Travel Updates
+                      </div>
+                    </div>
+                    <div class="item">
+                      <a target="_blank" href="http://d3-connect-four.herokuapp.com">
+                        <img src="static/images/c4.png" alt="D3 Connect-Four">
+                      </a>
+                        <div class="carousel-caption">
+                        D3.js Connect-Four
+                      </div>
+                    </div>
+                    <div class="item">
+                      <a target="_blank" href="https://chrome.google.com/webstore/search/minihypemachine">
+                        <img src="static/images/hype.png" alt="Mini-HypeMachine">
+                      </a>
+                      <div class="carousel-caption">
+                        HypeMachine Chrome Extension
+                      </div>
+                    </div>
+                    <div class="item">
+                      <a target="_blank" href="http://node-socket-redis-simplechat.herokuapp.com/">
+                        <img src="static/images/chat.png" alt="Socket.io ChatServer">
+                      </a>
+                      <div class="carousel-caption">
+                        Socket.io Chatserver
+                      </div>
+                    </div>
+                    <div class="item">
+                      <a target="_blank" href="http://blog.chrisbe.st/">
+                        <img src="static/images/blog.png" alt="blog.chrisbe.st">
+                      </a>
+                      <div class="carousel-caption">
+                        blog.chrisbe.st
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
                 </div>
+              </div>
             </div>
             <!--BlOG END-->
             
