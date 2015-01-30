@@ -67,7 +67,7 @@ var charts = {
         var windowHeight = $(window).height()
         ,   windowWidth = $(window).width()
         ,   height = windowHeight * 0.5
-        ,   width = windowWidth > 768 ? windowWidth * 0.40 : windowWidth * 0.7
+        ,   width = windowWidth > 768 ? windowWidth * 0.40 : windowWidth * 0.9
         ;
 
         this.margin = {top: 20, right: 0, bottom: 50, left: 0};
@@ -317,4 +317,28 @@ var sleekScroll = {
     }
 };
 
+// Isotope
+$(document).ready(function(){
+  var $container = $('#isotope-container'),
+      $body = $('body'),
+      colW = 20,
+      columns = null;
+  
+  $container.isotope({
+    // disable window resizing
+    resizable: false,
+    masonry: {columnWidth: colW},
+    itemSelector: '.project',
+    layoutMode: 'masonry',
+    transitionDuration: '0.9s',
+    animationEngine: 'best-available',
+    isFitWidth: true
+  });
 
+});
+
+// Lightbox bootstrap modal
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+}); 

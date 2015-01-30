@@ -13,6 +13,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../static/css/ekko-lightbox.min.css" rel="stylesheet">
         <link href="../static/css/style.css" rel="stylesheet">
         <link href="../static/css/face.css" rel="stylesheet">
         <link rel="shortcut icon" href="../static/images/favicon.ico" > 
@@ -47,7 +48,7 @@
                         <a href="#projects"  class="s-tooltip subheader" data-original-title="Recent projects" data-placement="bottom">projects</a>
                     </li>
                     <li class="title cl-effect-1">
-                        <a target="_blank" href="http://blog.chrisbe.st" class="s-tooltip subheader" >blog</a>
+                        <a href="#contact" class="s-tooltip subheader" >contact</a>
                     </li>
                </ul>
             </div>
@@ -70,12 +71,33 @@
             <div class="col-sm-offset-1 col-sm-7">
               <h1 style="padding-bottom:10px">About Me</h1>
               <h3>Hello!</h3>
-              <p>I'm a full-stack software engineer currently residing in San Francisco. I graduated from UC Berkeley in 2012 with a degree in Psychology and have been teaching myself computer science over the past two years by auditing courses, reading publications fervently, and  building software. Occasionally, I write articles in my <a target="_blank" href="http://blog.chrisbe.st">blog.</a>
+              <p style="font-size:19px">I'm a full-stack software engineer currently residing in San Francisco. I graduated from UC Berkeley in 2012 with a degree in Psychology and have been teaching myself computer science over the past two years by auditing courses, reading publications fervently, and  building software. 
               </p>
             </div>
           </div>
           <!-- ABOUT ME END-->
             
+            <!-- Blog -->
+            <div id="blog"></div><br> <!--Hack for scrollTo navigation-->
+            <h1 style="margin-top:50px">Recent Blog Posts</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Two Years of Vim</h4>
+                    <p>Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs hljd fhjs dfhj skjf sdh</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <h4>Two Years of Vim</h4>
+                    <p>Lorem ipsumsdfs ksd Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs fls dfs hljd fhjs dfhj skjf sdh</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <h4>Two Years of Vim</h4>
+                    <p>Lorem ipsumsdfs ksd fls dfs hljd fhjs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs Lorem ipsumsdfs ksd fls dfs dfhj skjf sdh</p>
+                </div>
+            </div>
+            <!-- END BLOG -->
+
             <!-- SKILLS -->
             <div id="skills"></div><br> <!--Hack for scrollTo navigation-->
             <h1 style="margin-top:50px">Skills <small> (Hover)</small></h1>
@@ -131,76 +153,41 @@
             </div>
             <!-- SKILLS END -->
 
+            <!-- PROJECTS -->
             <h1 id="projects" style="height:0px; margin:0px;"></h1><br> <!--Hack for scrollto Nav-->
             <div class="row">
               <div class="col-md-12">
               <h1 style="margin-top:50px">Projects</h1>
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <a target="_blank" href="http://closebus.herokuapp.com">
-                        <img src="static/images/closebus.png" alt="Closebus - Realtime Travel Estimator">
-                      </a>
-                      <div class="carousel-caption">
-                        Realtime Travel Updates
-                      </div>
-                    </div>
-                    <div class="item">
-                      <a target="_blank" href="http://d3-connect-four.herokuapp.com">
-                        <img src="static/images/c4.png" alt="D3 Connect-Four">
-                      </a>
-                        <div class="carousel-caption">
-                        D3.js Connect-Four
-                      </div>
-                    </div>
-                    <div class="item">
-                      <a target="_blank" href="https://chrome.google.com/webstore/search/minihypemachine">
-                        <img src="static/images/hype.png" alt="Mini-HypeMachine">
-                      </a>
-                      <div class="carousel-caption">
-                        HypeMachine Chrome Extension
-                      </div>
-                    </div>
-                    <div class="item">
-                      <a target="_blank" href="http://node-socket-redis-simplechat.herokuapp.com/">
-                        <img src="static/images/chat.png" alt="Socket.io ChatServer">
-                      </a>
-                      <div class="carousel-caption">
-                        Socket.io Chatserver
-                      </div>
-                    </div>
-                    <div class="item">
-                      <a target="_blank" href="http://blog.chrisbe.st/">
-                        <img src="static/images/blog.png" alt="blog.chrisbe.st">
-                      </a>
-                      <div class="carousel-caption">
-                        blog.chrisbe.st
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
+                <div id="isotope-container">
+                  <!-- CloseBus -->
+                  <a href="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg" data-toggle="lightbox" data-title="some title" data-footer="some footer">
+                    <img class="project" src="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg">
                   </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  <!-- ConnectFour -->
+                  <a href="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg" data-toggle="lightbox" data-title="some title" data-footer="some footer">
+                    <img class="project" src="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg">
+                  </a>
+                  <!-- HypeMachine -->
+                  <a href="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg" data-toggle="lightbox" data-title="some title" data-footer="some footer">
+                    <img class="project" src="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg">
+                  </a>
+                  <!-- Socket.io -->
+                  <a href="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg" data-toggle="lightbox" data-title="some title" data-footer="some footer">
+                    <img class="project" src="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg">
+                  </a>
+                  <!-- Wellforce -->
+                  <a href="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg" data-toggle="lightbox" data-title="some title" data-footer="some footer">
+                    <img class="project" src="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg">
+                  </a>
+                  <!-- Blog -->
+                  <a href="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg" data-toggle="lightbox" data-title="some title" data-footer="some footer">
+                    <img class="project" src="http://prismmpls.org/wp-content/uploads/2012/07/black-square_1000.jpg">
                   </a>
                 </div>
               </div>
             </div>
             <!--BlOG END-->
-            
+
             <!-- CONTACT -->
             <div id="contact"></div><br> <!--Hack for scrollTo navigation-->
             <div class="row">
@@ -279,7 +266,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <script src="../static/js/jquery.scrollTo.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+        <script src="../static/js/ekko-lightbox.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.0.0/isotope.pkgd.min.js"></script>
         <script src="../static/js/style.js"></script>
