@@ -138,13 +138,7 @@ var charts = {
     });
   }
   ,   data:
-      {   Frameworks:
-        [   {'name':'Django.py', 'skill':7}
-        ,   {'name':'Flask.py', 'skill':9}
-        ,   {'name':'Node.js', 'skill':6}
-        ,   {'name':'Express.js', 'skill':7}
-        ]
-      ,   Frontend:
+      {   Frontend:
         [   {'name':'HTML/CSS', 'skill': 6}
         ,   {'name':'JavaScript', 'skill': 8}
         ,   {'name':'D3.js', 'skill': 9}
@@ -175,9 +169,9 @@ var charts = {
         ,   {'name':'Redis', 'skill':6}
         ]
       ,   Extra:
-        [   {'name':'Vim', 'skill':8}
-        ,   {'name':'BDD', 'skill':8}
-        ,   {'name':'Basketball', 'skill':8}
+        [   {'name':'Vim', 'skill':7}
+        ,   {'name':'BDD', 'skill':6}
+        ,   {'name':'Basketball', 'skill':7}
         ,   {'name':'Smash Bros.', 'skill':9}
         ,   {'name':'LoL', 'skill':9}
         ]
