@@ -114,7 +114,7 @@ var charts = {
 
     if(yPosition > chartPosition.top - pageHeight/3 && !loaded) {
       mixpanel.track("Chart Loaded");
-      window.skillChart.bindData(charts.data.Frontend);
+      window.skillChart.bindData(charts.data.Languages);
       window.skillChart.loaded = true;
     }
     });
@@ -133,57 +133,55 @@ var charts = {
       e.preventDefault();
       $('#d3Chart').children().remove();
       window.skillChart = new charts.d3Chart();
-      window.skillChart.bindData(charts.data.Frontend);
+      window.skillChart.bindData(charts.data.Languages);
       window.skillChart.loaded = true;
     });
   }
   ,   data:
-  {   Frameworks:
-    [   {'name':'Django.py', 'skill':7}
-    ,   {'name':'Flask.py', 'skill':9}
-    ,   {'name':'Node.js', 'skill':6}
-    ,   {'name':'Express.js', 'skill':7}
-    ]
+      {   Frameworks:
+        [   {'name':'Django.py', 'skill':7}
+        ,   {'name':'Flask.py', 'skill':9}
+        ,   {'name':'Node.js', 'skill':6}
+        ,   {'name':'Express.js', 'skill':7}
+        ]
       ,   Frontend:
-      [   {'name':'HTML/CSS', 'skill': 5}
-    ,   {'name':'JavaScript', 'skill': 8}
-    ,   {'name':'D3.js', 'skill': 9}
-    ,   {'name':'Backbone.js', 'skill': 6}
-    ,   {'name':'jQuery', 'skill': 4}
-    ]
-      ,   Servers:
-      [   {'name':'AWS EC2', 'skill':7}
-    ,   {'name':'AWS ELB', 'skill':5}
-    ,   {'name':'Boto', 'skill':8}
-    ,   {'name':'Docker', 'skill':5}
-    ,   {'name':'Fabric', 'skill':7}
-    ,   {'name':'Linux', 'skill':4}
-    ]
+        [   {'name':'HTML/CSS', 'skill': 6}
+        ,   {'name':'JavaScript', 'skill': 8}
+        ,   {'name':'D3.js', 'skill': 9}
+        ,   {'name':'Backbone.js', 'skill': 7}
+        ,   {'name':'jQuery', 'skill': 4}
+        ]
+      ,   DevOps:
+        [   {'name':'Amazon EC2', 'skill':7}
+        ,   {'name':'Boto', 'skill':8}
+        ,   {'name':'Docker', 'skill':5}
+        ,   {'name':'Fabric', 'skill':7}
+        ,   {'name':'Unix', 'skill':7}
+        ]
       ,   Languages:
-      [   {'name':'Python', 'skill':9}
-    ,   {'name':'Javascript', 'skill':8}
-    ,   {'name':'Scala', 'skill':6}
-    ,   {'name':'Java', 'skill':2}
-    ,   {'name':'C', 'skill':3}
-    ,   {'name':'Scheme', 'skill':5}
-    ]
+        [   {'name':'Python', 'skill':9}
+        ,   {'name':'Javascript', 'skill':8}
+        ,   {'name':'Bash', 'skill':7}
+        ,   {'name':'Java', 'skill':2}
+        ,   {'name':'C', 'skill':6}
+        ,   {'name':'Scala', 'skill':4}
+        ]
       ,   Data:
-      [   {'name':'AWS S3', 'skill':8}
-    ,   {'name':'PostgreSQL', 'skill':7}
-    ,   {'name':'MySQL', 'skill':7}
-    ,   {'name':'SQLAlchemy', 'skill':6}
-    ,   {'name':'Redis', 'skill':6}
-    ,   {'name':'MongoDB', 'skill':3}
-    ]
+        [   {'name':'AWS S3', 'skill':8}
+        ,   {'name':'MongoDB', 'skill':8}
+        ,   {'name':'SQL', 'skill':6}
+        ,   {'name':'Hadoop', 'skill':4}
+        ,   {'name':'Spark', 'skill':4}
+        ,   {'name':'Redis', 'skill':6}
+        ]
       ,   Extra:
-      [   {'name':'Agile', 'skill':8}
-    ,   {'name':'Vim', 'skill':7}
-    ,   {'name':'BDD', 'skill':8}
-    ,   {'name':'Basketball', 'skill':8}
-    ,   {'name':'Smash Bros.', 'skill':9}
-    ,   {'name':'LoL', 'skill':9}
-    ]
-  }
+        [   {'name':'Vim', 'skill':8}
+        ,   {'name':'BDD', 'skill':8}
+        ,   {'name':'Basketball', 'skill':8}
+        ,   {'name':'Smash Bros.', 'skill':9}
+        ,   {'name':'LoL', 'skill':9}
+        ]
+      }
 }
 
 charts.d3Chart.prototype.bindData = function(data) {
