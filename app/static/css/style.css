@@ -264,3 +264,7 @@ img.opacity:{opacity: 1;filter: alpha(opacity=100);}
 .img-responsive {
     margin: 0 auto;
 }
+
+.modal-dialog {
+    margin: 0 auto;
+}
