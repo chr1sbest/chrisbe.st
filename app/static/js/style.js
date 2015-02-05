@@ -315,23 +315,29 @@ $(document).ready(function(){
   colW = 20,
   columns = null;
 
-$container.isotope({
-  // disable window resizing
-  resizable: false,
-  masonry: {
-    columnWidth: colW,
-    isFitWidth: true},
-  itemSelector: '.project',
-  layoutMode: 'masonry',
-  transitionDuration: '0.9s',
-  animationEngine: 'best-available',
-  isFitWidth: true
-});
-
+  $container.isotope({
+    // disable window resizing
+    resizable: false,
+    masonry: {
+      columnWidth: colW,
+      isFitWidth: true},
+    itemSelector: '.project',
+    layoutMode: 'masonry',
+    transitionDuration: '0.9s',
+    animationEngine: 'best-available',
+    isFitWidth: true
+  });
 });
 
 // Lightbox bootstrap modal
 $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
   event.preventDefault();
-  $(this).ekkoLightbox();
+  $(this).ekkoLightbox({
+    // Resize Lightbox image when content is finished loading.
+    'onContentLoaded': function() {
+      var height = $(window).height() * 0.7;
+      $('.img-responsive').css('max-height', height);
+    }
+  });
 }); 
+
