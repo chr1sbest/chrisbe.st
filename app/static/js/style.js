@@ -318,7 +318,9 @@ $(document).ready(function(){
 $container.isotope({
   // disable window resizing
   resizable: false,
-  masonry: {columnWidth: colW},
+  masonry: {
+    columnWidth: colW,
+    isFitWidth: true},
   itemSelector: '.project',
   layoutMode: 'masonry',
   transitionDuration: '0.9s',

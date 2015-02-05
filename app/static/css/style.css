@@ -256,3 +256,7 @@ img.opacity:{opacity: 1;filter: alpha(opacity=100);}
        -o-transition-property:      -o-transform, opacity;
           transition-property:         transform, opacity;
 }
+
+#isotope-container {
+    margin: 0 auto;
+}
