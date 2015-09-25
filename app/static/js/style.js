@@ -23,21 +23,20 @@ var submitMessage = {
 
     $.ajax(
       {   url: '/send_message'
-        ,   type: 'post'
-      ,   async: false
-      ,   data: 
-    {   'email': email
-      ,   'message': message
-    }
-    ,   dataType: 'html'
+      ,   type: 'post'
+      ,   async: true
+      ,   data: {   'email': email
+                ,   'message': message
+                }
+      ,   dataType: 'html'
       ,   success: function(returnedData){
-        mixpanel.track("Message Success");
-        $('div#boot-alert').load('success #alert-pass');
-      }
-    ,   error: function(returnedData){
-      mixpanel.track("Message Failed");
-      $('div#boot-alert').load('success #alert-fail');
-    }
+            mixpanel.track("Message Success");
+            $('div#boot-alert').load('success #alert-pass');
+          }
+      ,   error: function(returnedData){
+            mixpanel.track("Message Failed");
+            $('div#boot-alert').load('success #alert-fail');
+          }
       }
       );
 
@@ -104,38 +103,38 @@ var charts = {
   }
 
   ,   events: function() {
-    //Load D3Chart when scrolled far enough down
-    $(window).on('scroll', function() {
-      var yPosition = window.pageYOffset
-      ,   pageHeight = $(window).height()
-      ,   chartPosition = $('#skills').position()
-      ,   loaded = window.skillChart.loaded
-      ;
+        //Load D3Chart when scrolled far enough down
+        $(window).on('scroll', function() {
+          var yPosition = window.pageYOffset
+          ,   pageHeight = $(window).height()
+          ,   chartPosition = $('#skills').position()
+          ,   loaded = window.skillChart.loaded
+          ;
 
-    if(yPosition > chartPosition.top - pageHeight/3 && !loaded) {
-      mixpanel.track("Chart Loaded");
-      window.skillChart.bindData(charts.data.Languages);
-      window.skillChart.loaded = true;
-    }
-    });
+        if(yPosition > chartPosition.top - pageHeight/3 && !loaded) {
+          mixpanel.track("Chart Loaded");
+          window.skillChart.bindData(charts.data.Languages);
+          window.skillChart.loaded = true;
+        }
+        });
 
-    //Bind new data to chart
-    $(".chart-btn").click(function(e){
-      mixpanel.track("Dataset: " + e.target.innerHTML);
-      e.preventDefault();
-      window.skillChart.bindData(charts.data[e.target.innerHTML]);
-      window.skillChart.loaded = true;
-    });
+      //Bind new data to chart
+      $(".chart-btn").click(function(e){
+        mixpanel.track("Dataset: " + e.target.innerHTML);
+        e.preventDefault();
+        window.skillChart.bindData(charts.data[e.target.innerHTML]);
+        window.skillChart.loaded = true;
+      });
 
-    //Rebuild chart if width is resized
-    $(window).resize(function(e){
-      mixpanel.track("Resize Event");
-      e.preventDefault();
-      $('#d3Chart').children().remove();
-      window.skillChart = new charts.d3Chart();
-      window.skillChart.bindData(charts.data.Languages);
-      window.skillChart.loaded = true;
-    });
+      //Rebuild chart if width is resized
+      $(window).resize(function(e){
+        mixpanel.track("Resize Event");
+        e.preventDefault();
+        $('#d3Chart').children().remove();
+        window.skillChart = new charts.d3Chart();
+        window.skillChart.bindData(charts.data.Languages);
+        window.skillChart.loaded = true;
+      });
   }
   ,   data:
       {   Frontend:
@@ -154,15 +153,12 @@ var charts = {
         ]
       ,   Languages:
         [   {'name':'Python', 'skill':9}
-        ,   {'name':'Javascript', 'skill':8}
-        ,   {'name':'Bash', 'skill':7}
-        ,   {'name':'Java', 'skill':2}
-        ,   {'name':'C', 'skill':6}
-        ,   {'name':'Scala', 'skill':4}
+        ,   {'name':'Javascript', 'skill':7}
+        ,   {'name':'Bash', 'skill':6}
+        ,   {'name':'Go', 'skill':2}
         ]
       ,   Data:
-        [   {'name':'AWS S3', 'skill':8}
-        ,   {'name':'MongoDB', 'skill':8}
+        [   {'name':'MongoDB', 'skill':8}
         ,   {'name':'SQL', 'skill':6}
         ,   {'name':'Hadoop', 'skill':4}
         ,   {'name':'Spark', 'skill':4}
@@ -173,7 +169,7 @@ var charts = {
         ,   {'name':'BDD', 'skill':6}
         ,   {'name':'Basketball', 'skill':7}
         ,   {'name':'Smash Bros.', 'skill':9}
-        ,   {'name':'LoL', 'skill':9}
+        ,   {'name':'LoL', 'skill':8}
         ]
       }
 }
@@ -191,10 +187,10 @@ charts.d3Chart.prototype.bindData = function(data) {
 
   this.yMax = d3.max(data, function(d) { return +d.skill; });
   this.x.domain(data.map(function(d) { return d3.values(d)[0]; }))
-    this.y.domain([0, this.yMax])
+  this.y.domain([0, this.yMax])
 
-    //X Axis values are rotated to prevent overlap
-    this.svg.selectAll('.y.axis').call(this.yAxis);
+  //X Axis values are rotated to prevent overlap
+  this.svg.selectAll('.y.axis').call(this.yAxis);
   this.svg.selectAll('.x.axis').call(this.xAxis)
     .selectAll("text")  
     .style("text-anchor", "middle")
@@ -213,13 +209,13 @@ charts.d3Chart.prototype.bindData = function(data) {
       ,   starString = ''
       ;
 
-    //Add appropriate star rating to tooltip
-    for (var i = 0; i < stars; i++) {starString += '<i class="fa fa-star"></i>';}
-    if (d.skill % 2 == 1) starString += '<i class="fa fa-star-half-full"></i>';
-    for (var i = 1; i < emptyStars; i+=2) {starString += '<i class="fa fa-star-o"></i>';}
+      //Add appropriate star rating to tooltip
+      for (var i = 0; i < stars; i++) {starString += '<i class="fa fa-star"></i>';}
+      if (d.skill % 2 == 1) starString += '<i class="fa fa-star-half-full"></i>';
+      for (var i = 1; i < emptyStars; i+=2) {starString += '<i class="fa fa-star-o"></i>';}
 
-    return "<strong><span> " + d.name + "</span></strong><br>" +
-      "<span style='color:orange;'> " + starString + " </span>";
+      return "<strong><span> " + d.name + "</span></strong><br>" +
+        "<span style='color:orange;'> " + starString + " </span>";
     });
 
   this.svg.call(this.tip);
